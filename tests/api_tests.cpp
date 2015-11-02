@@ -1,6 +1,6 @@
 #include "../src/FastaHackAPI.hpp"
 
-int main (int argc, char** argv)
+int main ()
 {
   std::cout << "Hello world!" << std::endl;
   seqan::String<char> reference_file_name_1 = "/home/hannese/user/git/fastahack/tests/correct.fasta";

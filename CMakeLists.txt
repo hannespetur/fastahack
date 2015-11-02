@@ -1,9 +1,5 @@
 cmake_minimum_required (VERSION 2.8)
-project (gyper)
-
-# The version number.
-set (gyper_VERSION_MAJOR 0)
-set (gyper_VERSION_MINOR 1)
+project (fastahack)
 
 # C++11
 set (CMAKE_CXX_FLAGS "-W -Wall -Wfatal-errors -pedantic -Wno-variadic-macros -lrt -O3 -std=c++11 -DSEQAN_HAS_ZLIB=1 -DNDEBUG -DSEQAN_ENABLE_TESTING=0 -DSEQAN_ENABLE_DEBUG=0")

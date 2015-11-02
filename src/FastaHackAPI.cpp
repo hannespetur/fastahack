@@ -22,3 +22,9 @@ seqan::String<seqan::Dna5> FastaHackAPI::extract_region(std::string region)
   seqan::String<seqan::Dna5> seqan_sequence = sequence_cstr;
   return seqan_sequence;
 }
+
+seqan::String<seqan::Dna5> FastaHackAPI::extract_region(seqan::String<char> region)
+{
+  std::string region_str(toCString(region));
+  return extract_region(region_str);
+}

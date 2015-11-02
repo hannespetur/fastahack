@@ -28,6 +28,8 @@ class FastaHackAPI
   void index();
 
   seqan::String<seqan::Dna5> extract_region(std::string region);
+
+  seqan::String<seqan::Dna5> extract_region(seqan::String<char> region);
 };
 
 
