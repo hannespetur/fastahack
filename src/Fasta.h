@@ -24,6 +24,8 @@
 #include <ctype.h>
 #include <unistd.h>
 #include "Region.h"
+#include "seqan/basic.h"
+#include "seqan/sequence.h"
 
 using namespace std;
 
@@ -73,10 +75,13 @@ class FastaReference {
         FastaIndex* index;
         vector<FastaIndexEntry> findSequencesStartingWith(string seqnameStart);
         string getSequence(string seqname);
+        seqan::String<seqan::Dna5> get_seqan_sequence(std::string seqname);
         // potentially useful for performance, investigate
         // void getSequence(string seqname, string& sequence);
+        seqan::String<seqan::Dna5> get_seqan_sub_sequence(string seqname, int start, int length);
         string getSubSequence(string seqname, int start, int length);
         string getTargetSubSequence(FastaRegion& target);
+        seqan::String<seqan::Dna5> get_seqan_target_region(FastaRegion & target);
         string sequenceNameStartingWith(string seqnameStart);
         unsigned int getSequenceID(string seqname);
         long unsigned int sequenceLength(string seqname);
